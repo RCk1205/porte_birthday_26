@@ -1,41 +1,35 @@
-# PROJECT PORTE — Premium Birthday Edition
+# PROJECT PORTE — Premium Birthday Edition (GitHub Pages root layout)
 
-A responsive, six-moment birthday website for Netram Porte, made by Rahul.
+This edition is arranged for the exact GitHub repository layout shown in the screenshot: **all files are at the same level in the repository root**. There is no `assets/` subfolder.
 
-## What's included
+## Files to keep together
 
-- Premium multi-colour jewel palette: pearl, rose, amethyst, teal and champagne.
-- Frosted-glass cards, glossy gradients, pearlescent highlights and a light texture.
-- Netram's three portraits in the hero, JNV throwback and interactive photo gallery.
-- Local background music at `assets/porte-birthday-song.mp3` (autoplay is attempted; browsers may require a first tap).
-- Synthesized UI, portal, candle, relight and celebration effects.
-- Interactive six-candle cake.
-- Two-step ending: make a wish, trigger a cinematic bass boom and light burst, then reveal the final birthday message from Rahul.
-- Responsive layout for desktop and mobile.
+- `index.html`
+- `styles.css`
+- `birthday-redesign.css`
+- `premium-jewel.css`
+- `app.js`
+- `porte-birthday-song.mp3`
+- `porte-formal.jpg`
+- `porte-cultural-day.jpg`
+- `porte-event-close.jpg`
 
-## Run locally
+## Publish on GitHub Pages
 
-1. Extract the ZIP and keep `index.html`, the CSS files, `app.js`, and the `assets` folder together inside `project-porte`.
-2. Open `project-porte/index.html` in a modern browser. Do not move `index.html` out of this folder or separate `assets`.
-3. For best audio behaviour, serve the folder from a local web server or hosting provider. Browsers can block audible autoplay until the visitor interacts with the page; opening the gift starts the song when autoplay is blocked.
+1. Extract this ZIP. The files listed above will appear directly in the extracted folder (there is no nested project folder).
+2. In your repository, upload/replace these files **at the root**, beside one another. Do not place the media inside an `assets` folder.
+3. Commit the changes to the branch configured in **Settings → Pages** (currently `main`, `/ (root)`).
+4. Wait for the Pages deployment in the **Actions** tab to finish.
+5. Open `https://rck1205.github.io/porte_birthday_26/`.
 
-## Hosting
+All media URLs use `./filename`, so they resolve relative to `index.html` under the GitHub Pages project path. Filenames are case-sensitive on GitHub Pages; keep the spelling exactly as shown above.
 
-Upload the complete `project-porte` folder, including `assets`, to any static website host. Do not rename or separate the files inside `assets`.
+## Audio note
+
+The MP3 is included locally. The page attempts autoplay, but browsers may block audible autoplay until a visitor interacts with the invitation or enables music using the page's sound control.
 
 ## Personalization
 
-- The birthday greeting and final wish are in `index.html`.
-- The birthday note text used by the copy button is in `app.js` (`birthdayLetter`).
-- Friendship archive copy and multiverse lines are in `app.js`.
-- Main styling is in `styles.css` and `birthday-redesign.css`; the premium colour/glass overrides are in `premium-jewel.css`.
-
-
-## Portrait asset paths
-
-The page uses these local relative paths (all included in the ZIP):
-- `./assets/porte-formal.jpg`
-- `./assets/porte-cultural-day.jpg`
-- `./assets/porte-event-close.jpg`
-
-The hero and JNV photo panel have explicit responsive image sizing. The profile image and thumbnails stay visible even if JavaScript initialization is delayed, and show an intentional fallback only if an image fails to load.
+- Birthday greeting and final wish: `index.html`.
+- Birthday note copied by the button and the friendship archive / Porte-verse lines: `app.js`.
+- Visual styling: `styles.css`, `birthday-redesign.css`, and `premium-jewel.css`.

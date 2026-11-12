@@ -1,8 +1,9 @@
 /*
   Porte's birthday page — quick personalization guide
   ---------------------------------------------------
-  Add portraits in /assets using these exact names:
-    porte-01.jpg, porte-02.jpg, porte-03.jpg, porte-04.jpg
+  GitHub Pages deployment layout: keep index.html, CSS, app.js, the three
+  portrait JPGs, and porte-birthday-song.mp3 together in the repository root.
+  Media references in index.html are intentionally relative to this directory.
   The JNV throwbacks, Porte-verse lines, and Rahul's birthday note are below.
 */
 const archiveData = {
@@ -105,26 +106,16 @@ function configurePortraits() {
   const thumbs = $$('.portrait-thumb');
   const total = thumbs.length;
 
-  const syncPrimaryState = () => {
-    const loaded = primaryImg.complete && primaryImg.naturalWidth > 0;
-    const failed = primaryImg.complete && primaryImg.naturalWidth === 0;
-    primary.classList.toggle('has-image', loaded);
-    primary.classList.toggle('image-error', failed);
-  };
-  primaryImg.addEventListener('load', () => { primary.classList.add('has-image'); primary.classList.remove('image-error'); });
-  primaryImg.addEventListener('error', () => { primary.classList.remove('has-image'); primary.classList.add('image-error'); });
+  const syncPrimaryState = () => primary.classList.toggle('has-image', primaryImg.complete && primaryImg.naturalWidth > 0);
+  primaryImg.addEventListener('load', () => primary.classList.add('has-image'));
+  primaryImg.addEventListener('error', () => primary.classList.remove('has-image'));
   syncPrimaryState();
 
   thumbs.forEach((thumb, index) => {
     const img = $('img', thumb);
-    const syncThumbState = () => {
-      const loaded = img.complete && img.naturalWidth > 0;
-      const failed = img.complete && img.naturalWidth === 0;
-      thumb.classList.toggle('has-image', loaded);
-      thumb.classList.toggle('image-error', failed);
-    };
-    img.addEventListener('load', () => { thumb.classList.add('has-image'); thumb.classList.remove('image-error'); });
-    img.addEventListener('error', () => { thumb.classList.remove('has-image'); thumb.classList.add('image-error'); });
+    const syncThumbState = () => thumb.classList.toggle('has-image', img.complete && img.naturalWidth > 0);
+    img.addEventListener('load', syncThumbState);
+    img.addEventListener('error', syncThumbState);
     syncThumbState();
 
     thumb.addEventListener('click', () => {
@@ -148,16 +139,6 @@ function configurePortraits() {
   });
 }
 configurePortraits();
-
-// Graceful local-image diagnostics for the hero portal and JNV throwback photo.
-$$('.hero-portrait-img, .archive-memory-photo img').forEach(img => {
-  const holder = img.closest('.birthday-portal, .archive-memory-photo');
-  const markLoaded = () => holder?.classList.remove('image-error');
-  const markFailed = () => holder?.classList.add('image-error');
-  img.addEventListener('load', markLoaded);
-  img.addEventListener('error', markFailed);
-  if (img.complete) (img.naturalWidth > 0 ? markLoaded : markFailed)();
-});
 
 // JNV throwback cards open their birthday-note popups.
 $$('.archive-card').forEach(card => card.addEventListener('click', () => {
