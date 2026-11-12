@@ -33,3 +33,7 @@ The MP3 is included locally. The page attempts autoplay, but browsers may block 
 - Birthday greeting and final wish: `index.html`.
 - Birthday note copied by the button and the friendship archive / Porte-verse lines: `app.js`.
 - Visual styling: `styles.css`, `birthday-redesign.css`, and `premium-jewel.css`.
+
+
+### Portrait display note
+The supplied portrait photos preserve their original aspect ratios. Keep all JPG files next to `index.html`; do not move them into a subfolder. The hero portrait uses a circular crop intentionally, while the JNV and main gallery portraits display the complete source image without cutting off the subject.

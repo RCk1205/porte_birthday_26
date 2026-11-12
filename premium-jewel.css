@@ -373,3 +373,141 @@ body.wish-impact .cake-stage { box-shadow: 0 34px 110px rgba(176,75,124,.24), 0 
   .wish-blast-overlay.active { opacity: .72; }
   .birthday-end-card, .wish-prompt { transition: none !important; }
 }
+
+
+/* Portrait framing correction — preserve the complete supplied photos. */
+.hero-copy { position: relative; z-index: 3; }
+.hero-visual { z-index: 1; }
+.hero-portrait-portal {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 0;
+  background: #6e526f;
+}
+.hero-portrait-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 42%;
+  opacity: .96;
+}
+.hero-portrait-portal::after {
+  z-index: 1;
+  background: linear-gradient(145deg, rgba(255,255,255,.28), rgba(48,27,61,.06) 48%, rgba(34,20,48,.30));
+}
+.hero-portrait-portal > span,
+.hero-portrait-portal > small {
+  position: relative;
+  z-index: 2;
+  color: #fff !important;
+  text-shadow: 0 3px 15px rgba(36,20,48,.5);
+}
+.hero-portrait-portal > span {
+  margin-top: auto;
+  font-size: clamp(38px, 5.2vw, 76px) !important;
+  line-height: .9;
+}
+.hero-portrait-portal > small { margin: 5px 0 20%; }
+
+/* The JNV image has a tall original aspect ratio. Let it define its own height. */
+.archive-index {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 0;
+  height: auto;
+}
+.archive-index .index-orbit { flex: 0 0 auto; align-self: flex-start; margin: 0 0 18px; }
+.archive-index .micro-label { display: block; margin: 0 0 7px; }
+.archive-index h3 { margin: 0 0 17px; }
+.archive-memory-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 17px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.96);
+  border-radius: 17px;
+  background: linear-gradient(145deg, rgba(255,255,255,.86), rgba(225,239,243,.78) 55%, rgba(244,220,233,.68));
+  box-shadow: 0 12px 28px rgba(69,47,87,.10), inset 0 1px 0 #fff;
+  line-height: 0;
+}
+.archive-memory-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.archive-memory-photo > span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 7px 9px;
+  border: 1px solid rgba(255,255,255,.76);
+  border-radius: 999px;
+  background: rgba(45,31,60,.48);
+  color: #fff;
+  font: 700 7px var(--body);
+  letter-spacing: .09em;
+  line-height: 1.2;
+  backdrop-filter: blur(12px);
+}
+.archive-index .index-bottom { margin-top: 0; width: 100%; flex: 0 0 auto; }
+
+/* Full portrait rather than the old cover crop that cut off head and torso. */
+.portrait-frame {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1 / 2;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f4dce8, #e1f0eb 52%, #e1d8f0);
+}
+.portrait-frame > img,
+.portrait-frame > img.portrait-event-main {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  transform: none;
+  background: linear-gradient(145deg, rgba(255,255,255,.18), rgba(240,230,241,.30));
+}
+.portrait-frame:hover > img { transform: none; }
+.portrait-frame .portrait-placeholder { z-index: 0; }
+.portrait-frame.has-image .portrait-placeholder { display: none; }
+.portrait-thumb img { opacity: 1; object-fit: cover; object-position: center 22%; }
+.portrait-thumb.has-image img { opacity: 1; }
+
+@media (max-width: 760px) {
+  .hero-visual {
+    width: 86vw;
+    height: 86vw;
+    max-width: 360px;
+    max-height: 360px;
+    right: -8vw;
+    top: 72%;
+    opacity: .48;
+    transform: translateY(-50%);
+  }
+  .archive-index { padding: 20px; }
+  .archive-index .index-orbit { margin-bottom: 14px; }
+  .archive-memory-photo { margin-bottom: 16px; }
+  .portrait-frame { aspect-ratio: 1 / 2; height: auto; max-height: none; }
+}
+@media (max-width: 450px) {
+  .hero-visual { right: -8vw; top: 74%; width: 86vw; height: 86vw; opacity: .44; }
+}
