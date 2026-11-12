@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#21162f" />
+  <meta name="description" content="A birthday surprise for Netram Porte, made by Rahul." />
+  <title>Happy 22nd, Porte! — A birthday surprise from Rahul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./birthday-redesign.css" />
+  <link rel="stylesheet" href="./premium-jewel.css" />
+</head>
+<body>
+  <audio id="birthdayMusic" src="./assets/porte-birthday-song.mp3" preload="auto" autoplay loop playsinline></audio>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="ambient ambient-three" aria-hidden="true"></div>
+  <div class="party-sparkles" aria-hidden="true"></div>
+  <div class="floating-confetti" aria-hidden="true"><i>✦</i><i>✧</i><i>✦</i><i>✧</i><i>●</i><i>✦</i></div>
+
+  <div class="boot-screen" id="bootScreen" role="dialog" aria-modal="true" aria-labelledby="bootTitle">
+    <div class="boot-rings" aria-hidden="true"></div>
+    <div class="boot-content glass-panel birthday-invite">
+      <div class="invite-burst" aria-hidden="true">✦</div>
+      <p class="invite-kicker">A LITTLE BIRTHDAY SURPRISE</p>
+      <div class="gift-illustration" aria-hidden="true"><span class="gift-lid"></span><span class="gift-box"></span><span class="gift-ribbon"></span><span class="gift-bow">⌁</span></div>
+      <p class="boot-overline">SOMEONE TURNS 22 TODAY</p>
+      <h1 id="bootTitle">Porte, this one's<br><span>for you.</span></h1>
+      <p class="boot-sub">Made by Rahul. Powered by old JNV memories, questionable jokes, and an unreasonable amount of birthday energy.</p>
+      <div class="boot-status"><span id="bootStatus">YOUR SURPRISE IS READY</span><b>22 ✦</b></div>
+      <button class="button button-primary" id="launchButton" data-sfx="open">OPEN YOUR SURPRISE <span>↗</span></button>
+      <p class="boot-foot">NO HOMEWORK. JUST CAKE.</p>
+    </div>
+  </div>
+
+  <header class="topbar glass-nav">
+    <a class="brand" href="#home" aria-label="Porte birthday home"><span class="brand-mark">✦</span><span>PORTE'S <b>DAY</b></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#archives">The JNV days</a>
+      <a href="#subject">Birthday guy</a>
+      <a href="#multiverse">Porte-verse</a>
+      <a href="#finale">Cake time <span class="nav-cake">✦</span></a>
+    </nav>
+    <button class="sound-toggle" id="soundToggle" aria-pressed="false" title="Turn background music and sound effects on or off"><span class="sound-bars"><i></i><i></i><i></i><i></i></span><span id="soundLabel">ENABLE MUSIC</span></button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-web" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-pill">IT'S YOUR DAY</span> A BIRTHDAY SURPRISE FROM RAHUL</p>
+        <h1>HAPPY<br><span class="outline-word">22ND</span><br/><em>BIRTHDAY,</em><br/><strong>PORTE!</strong></h1>
+        <p class="hero-sub">From JNV Korba to the multiverse of adulthood — look at you, making it to level 22. Still no user manual included.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#archives">LET'S CELEBRATE <span>↘</span></a>
+          <a class="button button-glass" href="#finale">I HEARD THERE'S CAKE <span>↗</span></a>
+        </div>
+        <div class="hero-meta"><span><i></i> NETRAM PORTE</span><span>22 YEARS OF PORTE</span><span>MADE BY RAHUL</span></div>
+      </div>
+      <div class="hero-balloons" aria-hidden="true"><span class="hero-balloon balloon-pink"></span><span class="hero-balloon balloon-blue"></span><span class="hero-balloon balloon-yellow"></span></div>
+      <div class="hero-visual reveal" aria-label="A glowing multiverse birthday portal with a birthday gift">
+        <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+        <div class="portal-halo halo-blue"></div><div class="portal-halo halo-red"></div>
+        <div class="portal-ring ring-outer"><span class="ring-marker marker-one"></span><span class="ring-marker marker-two"></span></div>
+        <div class="portal-ring ring-inner"></div>
+        <div class="portal-window birthday-portal hero-portrait-portal"><img class="hero-portrait-img" src="./assets/porte-formal.jpg" loading="eager" decoding="async" alt="Netram Porte in a formal portrait" /><span>22</span><small>HAPPY BIRTHDAY</small></div>
+        <div class="hero-float-card float-card-top"><span class="float-card-icon">🎁</span><div><small>YOUR DAY. YOUR RULES.</small><b>MAIN CHARACTER MODE</b></div></div>
+        <div class="hero-float-card float-card-bottom"><span class="float-card-icon blue">🎂</span><div><small>VERY IMPORTANT PLAN</small><b>CAKE BEFORE ANYTHING</b></div></div>
+        <span class="portal-coordinate coordinate-a">✦ GOOD VIBES</span><span class="portal-coordinate coordinate-b">✦ ZERO HOMEWORK</span>
+      </div>
+      <div class="hero-bottomline"><span>JNV KORBA TO LEVEL 22 · WHAT A RUN</span><span>KEEP SCROLLING <b>↓</b></span></div>
+    </section>
+
+    <div class="birthday-marquee" aria-label="Happy 22nd birthday, Porte"><div><span>HAPPY 22ND, PORTE</span><b>✦</b><span>GOOD VIBES ONLY</span><b>✦</b><span>CAKE IS NON-NEGOTIABLE</span><b>✦</b><span>MADE BY RAHUL</span><b>✦</b><span>HAPPY 22ND, PORTE</span><b>✦</b></div></div>
+
+    <section class="section archives-section" id="archives">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow"><span class="section-number">✦</span> THROWBACK TIME</p><h2>REMEMBER THE<br/><span>JNV DAYS?</span></h2></div>
+        <p class="section-note">Before the adulting, deadlines and all that serious business — there was JNV Korba. Pretty solid origin story, if you ask me.</p>
+      </div>
+      <div class="archive-layout birthday-memory-layout">
+        <div class="archive-index glass-panel reveal">
+          <div class="index-orbit"><span>J</span></div>
+          <div class="archive-memory-photo"><img src="./assets/porte-cultural-day.jpg" loading="eager" decoding="async" alt="Netram at a school cultural event in traditional costume" /><span>A LITTLE JNV-ERA MOMENT</span></div>
+          <p class="micro-label">WHERE IT ALL BEGAN</p><h3>JNV<br/><span>KORBA</span></h3>
+          <div class="index-bottom"><span>RAHUL + PORTE</span><b>THE SCHOOL ERA</b></div>
+        </div>
+        <div class="archive-cards">
+          <button class="archive-card glass-card reveal" data-archive="classroom" data-sfx="popup">
+            <span class="card-topline">CHAPTER ONE <span>↗</span></span>
+            <span class="archive-symbol symbol-blue">✎</span>
+            <strong>THE JNV<br/>CHAPTER</strong>
+            <span class="archive-hint">Two school friends. One campus. A friendship that made it beyond the bell.</span>
+            <span class="card-bottom">TAKE A LOOK <b>+</b></span>
+          </button>
+          <button class="archive-card glass-card reveal" data-archive="incidents" data-sfx="popup">
+            <span class="card-topline">CHAPTER TWO <span>↗</span></span>
+            <span class="archive-symbol symbol-red">✦</span>
+            <strong>THE LORE<br/>IS REAL</strong>
+            <span class="archive-hint">The kind of school-day stories that don't need a proper explanation.</span>
+            <span class="card-bottom">UNLOCK THE LORE <b>+</b></span>
+          </button>
+          <button class="archive-card glass-card reveal" data-archive="legend" data-sfx="popup">
+            <span class="card-topline">CHAPTER THREE <span>↗</span></span>
+            <span class="archive-symbol symbol-gold">🎉</span>
+            <strong>SEASON<br/>TWENTY-TWO</strong>
+            <span class="archive-hint">New age, fresh plot, same friend on the other side of the screen.</span>
+            <span class="card-bottom">SEE WHAT'S NEXT <b>+</b></span>
+          </button>
+        </div>
+      </div>
+      <p class="section-footnote">SOME FRIENDSHIPS SURVIVE THE SCHOOL BELL. THIS ONE MADE IT TO 22.</p>
+    </section>
+
+    <section class="section subject-section" id="subject">
+      <div class="subject-decoration" aria-hidden="true">22</div>
+      <div class="section-heading reveal">
+        <div><p class="eyebrow"><span class="section-number">✦</span> TODAY'S SPECIAL GUEST</p><h2>THE BIRTHDAY<br/><span>GUY.</span></h2></div>
+        <p class="section-note">One birthday boy. Three camera-roll-worthy looks. A whole lot of reasons to make a fuss today.</p>
+      </div>
+      <div class="subject-layout">
+        <div class="portrait-main reveal">
+          <div class="portrait-frame portrait-large" data-portrait="1">
+            <img class="portrait-event-main" src="./assets/porte-event-close.jpg" loading="eager" decoding="async" alt="Netram Porte at a school cultural celebration" />
+            <div class="portrait-placeholder"><div class="portrait-placeholder-mark">NP</div><small>THE BIRTHDAY BOY</small><em>PORTRAIT 01</em></div>
+            <div class="portrait-scan"></div>
+            <span class="frame-corner corner-tl"></span><span class="frame-corner corner-tr"></span><span class="frame-corner corner-bl"></span><span class="frame-corner corner-br"></span>
+            <span class="portrait-index">PORTE · 01 / 03</span>
+            <span class="portrait-glass-label"><span>THE MAN OF THE HOUR</span><b>✦ 01 / 03</b></span>
+          </div>
+          <div class="portrait-caption"><span>THE CULTURAL LOOK</span><span>TAP A PHOTO TO SWITCH</span></div>
+        </div>
+        <div class="subject-info reveal">
+          <div class="subject-name"><span class="micro-label">THE BIRTHDAY BOY, HIMSELF</span><h3>NETRAM<br/><span>PORTE</span></h3></div>
+          <div class="birthday-sticker-row"><span class="birthday-sticker sticker-red">✦ LEVEL 22</span><span class="birthday-sticker sticker-blue">JNV KORBA ALUM</span><span class="birthday-sticker sticker-gold">CAKE APPROVED</span></div>
+          <div class="traits-panel glass-panel birthday-quote-panel">
+            <div class="traits-head"><span>IMPORTANT PUBLIC ANNOUNCEMENT</span><span class="live-label"><i></i> IT'S OFFICIAL</span></div>
+            <p class="birthday-quote">Everybody please act surprised. <em>It's Porte's birthday.</em></p>
+            <p class="trait-disclaimer">22 looks good on you, mate. Don't let it get to your head.</p>
+          </div>
+          <div class="mini-gallery" aria-label="Netram's birthday photo gallery">
+            <button class="portrait-thumb active" data-sfx="photo" data-src="./assets/porte-event-close.jpg" data-alt="Netram at a school cultural celebration" data-caption="THE CULTURAL LOOK" aria-label="Show Netram's cultural celebration portrait"><img src="./assets/porte-event-close.jpg" alt=""/><span>01</span></button>
+            <button class="portrait-thumb" data-sfx="photo" data-src="./assets/porte-cultural-day.jpg" data-alt="Netram in his full cultural-event outfit" data-caption="FULL VIBE PORTE" aria-label="Show Netram's full cultural-event portrait"><img src="./assets/porte-cultural-day.jpg" loading="eager" decoding="async" alt=""/><span>02</span></button>
+            <button class="portrait-thumb" data-sfx="photo" data-src="./assets/porte-formal.jpg" data-alt="Netram in a formal outfit by a waterfall" data-caption="THE FORMAL EDITION" aria-label="Show Netram's formal portrait"><img src="./assets/porte-formal.jpg" alt=""/><span>03</span></button>
+          </div>
+          <p class="gallery-note">Three different Porte moments, each deserving a proper spot on the birthday wall.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section multiverse-section" id="multiverse">
+      <div class="multiverse-orb" aria-hidden="true"></div>
+      <div class="section-heading reveal">
+        <div><p class="eyebrow"><span class="section-number">✦</span> A VERY SCIENTIFIC QUESTION</p><h2>WHICH PORTE<br/>IS SHOWING UP<br/><span>THIS YEAR?</span></h2></div>
+        <p class="section-note">One person. Many possible timelines. Tap a card and let the multiverse decide your birthday personality.</p>
+      </div>
+      <div class="variant-grid birthday-variant-grid">
+        <button class="variant-card glass-card reveal" data-sfx="select" data-variant="0"><span class="variant-no">THE CLASSIC</span><span class="variant-icon variant-blue">🕶️</span><strong>THE OG<br/>PORTE</strong><span class="variant-desc">The original. No updates required. Mostly.</span><span class="variant-action">PICK THIS PORTE <b>↗</b></span></button>
+        <button class="variant-card glass-card reveal" data-sfx="select" data-variant="1"><span class="variant-no">THE PARTY CUT</span><span class="variant-icon variant-red">🪩</span><strong>PARTY<br/>PORTE</strong><span class="variant-desc">Shows up for the cake. Stays for the chaos.</span><span class="variant-action">PICK THIS PORTE <b>↗</b></span></button>
+        <button class="variant-card glass-card reveal" data-sfx="select" data-variant="2"><span class="variant-no">THE PLOT TWIST</span><span class="variant-icon variant-gold">🕸️</span><strong>CHAOS<br/>PORTE</strong><span class="variant-desc">No plan. Somehow still the main character.</span><span class="variant-action">PICK THIS PORTE <b>↗</b></span></button>
+        <button class="variant-card glass-card reveal" data-sfx="select" data-variant="3"><span class="variant-no">THE NEW SEASON</span><span class="variant-icon variant-violet">🚀</span><strong>PORTE<br/>22.0</strong><span class="variant-desc">Big plans, bigger wins, same legendary name.</span><span class="variant-action">PICK THIS PORTE <b>↗</b></span></button>
+      </div>
+      <div class="variant-output glass-panel" id="variantOutput" aria-live="polite"><span class="output-pulse"></span><span>CHOOSE YOUR BIRTHDAY EDITION ABOVE ✦</span></div>
+    </section>
+
+
+    <section class="section finale-section" id="finale">
+      <div class="finale-confetti-deco" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span></div>
+      <div class="finale-heading reveal">
+        <p class="eyebrow"><span class="section-number">✦</span> THE MOST IMPORTANT PART</p>
+        <h2>MAKE A WISH,<br/><span>BIRTHDAY BOY.</span></h2>
+        <p>You've made it to 22. Now make it official — six candles, one big wish, and cake waiting at the finish line.</p>
+      </div>
+      <div class="cake-stage reveal">
+        <div class="cake-stage-top"><span><i></i> FRESHLY BAKED FOR PORTE</span><span>22 YEARS · EXTRA FROSTING</span></div>
+        <div class="cake-spotlight" aria-hidden="true"></div>
+        <div class="cake-balloon balloon-left" aria-hidden="true"><span>22</span></div>
+        <div class="cake-balloon balloon-right" aria-hidden="true"><span>✦</span></div>
+        <div class="cake-wrap">
+          <div class="cake-sparkle sparkle-a">✦</div><div class="cake-sparkle sparkle-b">✧</div><div class="cake-sparkle sparkle-c">✦</div>
+          <div class="candles" id="candles" aria-label="Six birthday candles. Select each flame to blow it out.">
+            <button class="candle" type="button" aria-label="Blow out candle 1" data-candle="1" data-sfx="candle"><span class="flame"></span><span class="wick"></span><span class="candle-stick"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle 2" data-candle="2" data-sfx="candle"><span class="flame"></span><span class="wick"></span><span class="candle-stick"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle 3" data-candle="3" data-sfx="candle"><span class="flame"></span><span class="wick"></span><span class="candle-stick"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle 4" data-candle="4" data-sfx="candle"><span class="flame"></span><span class="wick"></span><span class="candle-stick"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle 5" data-candle="5" data-sfx="candle"><span class="flame"></span><span class="wick"></span><span class="candle-stick"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle 6" data-candle="6" data-sfx="candle"><span class="flame"></span><span class="wick"></span><span class="candle-stick"></span></button>
+          </div>
+          <div class="cake-topper"><span>22</span><small>PORTE</small></div>
+          <div class="cake-tier tier-top"><span class="icing-drip"></span><i class="cake-berry berry-one"></i><i class="cake-berry berry-two"></i><i class="cake-berry berry-three"></i><span class="tier-label">PORTE</span></div>
+          <div class="cake-tier tier-middle"><span class="icing-drip"></span><i class="sprinkle sp-one"></i><i class="sprinkle sp-two"></i><i class="sprinkle sp-three"></i><i class="sprinkle sp-four"></i></div>
+          <div class="cake-tier tier-bottom"><span class="icing-drip"></span><span class="cake-number">22</span><span class="cake-stars">✦ &nbsp; ✧ &nbsp; ✦</span></div>
+          <div class="cake-board"></div>
+          <div class="cake-shadow"></div>
+        </div>
+        <div class="cake-instruction" id="cakeInstruction"><span class="instruction-icon">☝</span><span>MAKE A WISH — TAP THE FLAMES TO BLOW OUT YOUR CANDLES</span></div>
+        <div class="candle-progress" aria-live="polite"><span id="candleCount">6</span> CANDLES LEFT <i><b id="candleProgressBar"></b></i></div>
+        <div class="cake-actions"><button class="button button-primary" id="blowAllButton" data-sfx="blow">BLOW OUT THE CANDLES <span>✦</span></button><button class="button button-glass button-reset" id="resetCakeButton" data-sfx="relight">ONE MORE WISH? <span>↻</span></button></div>
+        <div class="wish-reveal" id="wishReveal" aria-live="polite">
+          <div class="wish-prompt" id="wishPrompt">
+            <div class="wish-burst" aria-hidden="true">✨</div>
+            <p class="micro-label">ALL SIX CANDLES OUT · THE MOMENT IS YOURS</p>
+            <h3>MAKE A<br/><span>WISH.</span></h3>
+            <p>Close your eyes for a second. Think big. No need to tell anyone what you wished for.</p>
+            <button class="button button-primary finale-button" id="makeWishButton" type="button">I'VE MADE MY WISH <span>✦</span></button>
+          </div>
+          <article class="birthday-end-card" id="birthdayEndCard" aria-hidden="true">
+            <div class="end-card-glint" aria-hidden="true"></div>
+            <div class="end-card-topline"><span>ONE MORE THING BEFORE YOU GO</span><b>✦ 22 ✦</b></div>
+            <p class="end-card-kicker">THE UNIVERSE HEARD THAT</p>
+            <h3>HAPPY 22ND,<br/><span>PORTE!</span></h3>
+            <p class="end-card-message">From JNV Korba days to everything still waiting ahead — here's to bigger adventures, ridiculous laughs, good people, unexpected wins, and stories we'll be telling for years. Have an absolutely brilliant year, bro.</p>
+            <div class="end-card-signature"><span>YOUR FRIEND FROM THE JNV DAYS</span><b>— RAHUL</b></div>
+            <div class="end-card-actions">
+              <button class="button button-primary" id="copyBirthdayNote" type="button" data-sfx="tap">COPY THE WISH <span>↗</span></button>
+              <button class="button button-glass" id="replayWishButton" type="button" data-sfx="relight">RELIGHT & REPLAY <span>↻</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+      <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+    </section>
+  </main>
+
+  <div class="wish-blast-overlay" id="wishBlastOverlay" aria-hidden="true"></div>
+  <footer class="footer"><span>HAPPY 22ND, PORTE ✦</span><span>MADE BY RAHUL · JNV KORBA ORIGINALS</span><a href="#home">BACK TO THE TOP ↑</a></footer>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-window glass-panel">
+      <div class="modal-top"><span id="modalEyebrow">A LITTLE THROWBACK</span><button class="modal-close" data-close-modal aria-label="Close">×</button></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
